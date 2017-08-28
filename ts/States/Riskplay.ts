@@ -21,10 +21,10 @@ module BoilerPlate {
       this.game.world.removeAll();
     }
 
-    public preload(): void {
-      this.load.image('wheel', 'assets/images/wheel.png');
-      this.load.image('pin', 'assets/images/pin.png');
-    }
+    // public preload(): void {
+    //   this.load.image('wheel', 'assets/images/wheel.png');
+    //   this.load.image('pin', 'assets/images/pin.png');
+    // }
 
     public create(): void {
       super.create();
@@ -44,7 +44,7 @@ module BoilerPlate {
       this.cancelBtn = new LabeledButton(this.game, 0, 0, 'CANCEL', textStyle, this.cancelGame, this, 150, 80);
       this.cancelBtn.createTexture(0xf98f25);
 
-      this.wheel = this.game.add.sprite(0, 0, 'wheel');
+      this.wheel = this.game.add.sprite(0, 0, Images.Wheel);
 
       this.wheel.anchor.setTo(0.5, 0.5);
       // scale
@@ -54,7 +54,7 @@ module BoilerPlate {
       loadWheel.to({ x: this.game.world.centerX }, 2000, Phaser.Easing.Bounce.Out);
       loadWheel.onComplete.add(this.firstTween, this);
       loadWheel.start();
-      this.pin = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'pin');
+      this.pin = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, Images.Pin);
       this.pin.anchor.set(0.5, 0.5);
       this.pin.scale.setTo(0.8);
       this.pin.alpha = 0;
