@@ -60,6 +60,7 @@ module BoilerPlate {
             this.state.add(Fabrique.SplashScreen.Preloader.Name, Fabrique.SplashScreen.Preloader, false);
             this.state.add(Menu.Name, Menu, false);
             this.state.add(Gameplay.Name, Gameplay, false);
+            this.state.add(Riskplay.Name, Riskplay, false);
 
             let updateText: () => void = (): void => {
                 this.recursiveUpdateText(this.stage);
